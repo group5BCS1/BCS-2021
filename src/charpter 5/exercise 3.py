@@ -1,10 +1,12 @@
+# GROUP 5 BCS MEMBERS 2021
+# AINAMANI CHRISTIAN 2020/BCS/001
+# NABETA BEWERI 2020/BCS/089/PS
+# BWAMBALE DERICK 2020/BCS/068/PS
+# OKWAKUNDA GLORIA 2020/BCS/091/PS
 # Vending Machine Change Maker
 print("Welcome to the Vending Machine Change Maker Program")
 print("Change maker initialized.")
 print("Stock contains:\n    25 nickels\n    25 dimes\n    25 quarters\n    0 ones\n    0 fives")
-
-
-
 nickels = 25
 dimes = 25
 quarters = 25
@@ -16,7 +18,6 @@ while price_str != 'q':
     total_cents = round(price_flo * 100)
     dollars = total_cents // 100
     cents = total_cents - (dollars * 100)
-
     if total_cents % 5 == 0 and total_cents > 0:
         print("\nMenu for deposits:\n  'n' - deposit a nickel\n  'd' - deposit a dime",
               "\n  'q' - deposit a quarter\n  'o' - deposit a one dollar bill\n  'f' - deposit a five dollar bill", \
@@ -93,13 +94,9 @@ while price_str != 'q':
             else:
                 print("Illegal deposit: ", deposit_str)
                 deposit_str = input("\nIndicate your deposit: ")
-
     else:
         print("Illegal price: Must be a non-negative multiple of 5 cents.")
-
     print("\nStock contains:\n    ", nickels, " nickels\n    ", dimes, " dimes\n    ", \
           quarters, " quarters\n    ", ones, " ones\n    ", fives, " fives")
-
     price_str = input("\nEnter the purchase price (xx.xx) or 'q' to quit: ")
-
 print('\nThank You for using the Vending Machine Change Maker Program')
